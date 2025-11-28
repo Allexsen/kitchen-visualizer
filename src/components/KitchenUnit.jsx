@@ -8,9 +8,26 @@ const Part = ({ position, args, partId, label }) => {
     const materialTier = materials.find(m => m.id === selection?.materialId);
     const option = materialTier?.options.find(o => o.id === selection?.optionId);
 
-    const handleClick = (e) => {
+    const pointerDownPos = React.useRef({ x: 0, y: 0 });
+
+    const handlePointerDown = (e) => {
+        // Store the initial pointer position
+        pointerDownPos.current = { x: e.clientX, y: e.clientY };
+    };
+
+    const handlePointerUp = (e) => {
         e.stopPropagation();
-        setActivePart(partId);
+
+        // Calculate how far the pointer moved
+        const deltaX = Math.abs(e.clientX - pointerDownPos.current.x);
+        const deltaY = Math.abs(e.clientY - pointerDownPos.current.y);
+        const dragDistance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+
+        // Only treat as a click if the pointer didn't move much (less than 15 pixels)
+        // This helps distinguish between clicks and drags (15px threshold for 3D rotation)
+        if (dragDistance < 15) {
+            setActivePart(partId);
+        }
     };
 
     const color = option?.color || '#ffffff';
@@ -19,7 +36,8 @@ const Part = ({ position, args, partId, label }) => {
     return (
         <mesh
             position={position}
-            onClick={handleClick}
+            onPointerDown={handlePointerDown}
+            onPointerUp={handlePointerUp}
             castShadow
             receiveShadow
         >
