@@ -1,16 +1,58 @@
-# React + Vite
+# Kitchen Visualizer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A 3D interactive kitchen design tool built with React, Three.js, and React Three Fiber. Visualize and customize your dream kitchen in real-time with an intuitive interface.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**[View Live Demo](https://allexsen.github.io/kitchen-visualizer/)**
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Interactive 3D Visualization**: Explore your kitchen design from any angle
+- **Real-time Customization**: Modify materials, colors, and layouts on the fly
+- **Modern Tech Stack**: Built with React 19, Three.js, and Vite for optimal performance
+- **Responsive Design**: Works seamlessly across desktop and mobile devices
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React 19** - UI framework
+- **Three.js** - 3D graphics engine
+- **React Three Fiber** - React renderer for Three.js
+- **React Three Drei** - Useful helpers for React Three Fiber
+- **Zustand** - State management
+- **Tailwind CSS** - Styling
+- **Vite** - Build tool and dev server
+
+## 📦 Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/Allexsen/kitchen-visualizer.git
+
+# Navigate to project directory
+cd kitchen-visualizer
+
+# Install dependencies
+npm install
+```
+
+## 🏃 Development
+
+```bash
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## 🚀 Deployment
+
+This project is automatically deployed to GitHub Pages via GitHub Actions when changes are pushed to the main branch.
+
+## 📄 License
+
+This project is open source and available under the MIT License.
