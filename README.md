@@ -1,3 +1,9 @@
+Probably useless piece of code for you.
+
+Only exists bcs my relative needed a tool like this :D
+
+AI-generated stuff below.
+
 # Kitchen Visualizer
 
 A 3D interactive kitchen design tool built with React, Three.js, and React Three Fiber. Visualize and customize your dream kitchen in real-time with an intuitive interface.
